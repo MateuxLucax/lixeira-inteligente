@@ -1,0 +1,227 @@
+.landing {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#49b86e), color-stop(#3ea568), color-stop(#369160), color-stop(#307f58), to(#2b6c4f));
+  background-image: linear-gradient(to right bottom, #49b86e, #3ea568, #369160, #307f58, #2b6c4f);
+  min-height: 80vh;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
+  & .row {
+    -webkit-transform: skewY(3deg);
+            transform: skewY(3deg);
+  }
+  &-container {
+    display: grid !important;
+    -ms-flex-line-pack: center !important;
+        align-content: center !important;
+  }
+  &-title {
+    -webkit-animation: fadeInRight 1s ease-in-out;
+            animation: fadeInRight 1s ease-in-out;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 5rem;
+    padding-bottom: 1rem;
+    color: $branco;
+    @media #{$small-and-down} {
+      font-size: 3.5rem;
+    }
+  }
+  &-subtitle {
+    -webkit-animation: fadeInRight 1s ease-in-out;
+            animation: fadeInRight 1s ease-in-out;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 0;
+    color: $branco;
+    @media #{$small-and-down} {
+      font-size: 1.5rem;
+    }
+  }
+  &-img {
+    -webkit-animation: fadeInLeft 1s ease-in-out;
+            animation: fadeInLeft 1s ease-in-out;
+    display: inherit;
+    width: 100%;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
+.o-que-e {
+  background: url("../img/fundos/icones.svg"), $branco;
+  background-size: 50vw;
+  min-height: 50vh;
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
+  & .row {
+    -webkit-transform: skewY(3deg);
+            transform: skewY(3deg);
+  }
+  &-container {
+    margin-top: -5vh;
+    display: grid !important;
+    -ms-flex-line-pack: center !important;
+        align-content: center !important;
+  }
+  &-img {
+    width: 50%;
+  }
+  @media #{$medium-and-down} {
+    background-size: cover;
+    &-container {
+      margin-top: 0;
+    }
+    &-img {
+      width: 80%;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+.como-funciona {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2b6c4f), color-stop(#307f58), color-stop(#369160), color-stop(#3ea568), to(#49b86e));
+  background-image: linear-gradient(to right bottom, #2b6c4f, #307f58, #369160, #3ea568, #49b86e);
+  min-height: 70vh;
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
+  & .row {
+    -webkit-transform: skewY(3deg);
+            transform: skewY(3deg);
+  }
+}
+
+.contador {
+  background: url("../img/fundos/icones.svg"), $branco;
+  background-size: 50vw;
+  min-height: 60vh;
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
+  & .row {
+    -webkit-transform: skewY(3deg);
+            transform: skewY(3deg);
+  }
+  &-container {
+    margin-top: -2.5vh;
+    display: grid !important;
+    -ms-flex-line-pack: center !important;
+        align-content: center !important;
+  }
+  &-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: $primary-color;
+    @media #{$small-and-down} {
+      font-size: 1.5rem;
+    }
+  }
+  &-text {
+    padding-bottom: 2rem;
+  }
+  &-numeros {
+    color: $secondary-color-dark;
+    font-size: 10rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+  }
+}
+
+.faca-voce-tambem {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b6c4f), color-stop(#307f58), color-stop(#369160), color-stop(#3ea568), to(#49b86e));
+  background-image: linear-gradient(to bottom, #2b6c4f, #307f58, #369160, #3ea568, #49b86e);
+  min-height: 80vh;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
+  & .row {
+    -webkit-transform: skewY(3deg);
+            transform: skewY(3deg);
+  }
+  &-container {
+    margin-top: -2.5vh;
+    @media #{$small-and-down} {
+      margin-top: 0;
+    }
+  }
+}
+
+.fundo-icones {
+  background: url("../img/fundos/icones.svg"), $branco;
+  background-size: 50vw;
+}
+
+.altura-80vh {font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  color: $primary-color;
+  @media #{$small-and-down} {
+    font-size: 2.5rem;
+  }
+  min-height: 80vh !important;
+  @media #{$small-and-down} {
+    min-height: 0 !important;
+  }
+}
+
+.altura-60vh {
+  min-height: 60vh !important;
+  @media #{$small-and-down} {
+    min-height: 0 !important;
+  }
+}
+
+.altura-70vh {
+  min-height: 70vh !important;
+  @media #{$small-and-down} {
+    min-height: 0 !important;
+  }
+}
+
+.titulo {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  @media #{$small-and-down} {
+    font-size: 2.5rem;
+  }
+}
+
+.titulo-menor {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  @media #{$small-and-down} {
+    font-size: 2rem;
+  }
+  @media #{$medium-only} {
+    font-size: 2.5rem;
+  }
+}
+
+.justify-right-grid {
+  justify-items: right !important;
+  @media #{$small-and-down} {
+    justify-items: center !important;  
+  }
+}
+
+.texto {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.link-branco {
+  display:inline-block;
+  border-bottom: .05rem solid $branco;
+  color: $branco;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  &:hover {
+    color: rgba($branco, .75);
+    border-bottom: .05rem solid rgba($branco, .75);
+  }
+}
