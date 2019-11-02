@@ -25,7 +25,7 @@ Como o objetivo da Lixeira Inteligete é auxiliar no processo de separação e r
 * **Mateus Lucas**  - [Email](mailto:mateus@lixeirainteligente.com)
 * **André Renkel** - [Email](mailto:andre@lixeirainteligente.com)
 
-## License
+## Licença
 
-Este projeto está sob a licença GPL v3, olhe o arquivo [LICENSE.md](LICENSE.md) para mais detalhes
+Este projeto está sob a licença LGPL-3, olhe o arquivo [LICENSE.md](LICENSE.md) para mais detalhes
 
