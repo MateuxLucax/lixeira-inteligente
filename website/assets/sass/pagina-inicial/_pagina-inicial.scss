@@ -78,6 +78,11 @@
       padding-bottom: 2rem;
     }
   }
+  @media #{$small-and-down} {
+    &-img {
+      width: 60%;
+    }
+  }
 }
 
 .como-funciona {
@@ -121,10 +126,14 @@
     padding-bottom: 2rem;
   }
   &-numeros {
+    margin-top: -1rem;
     color: $secondary-color-dark;
     font-size: 10rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    @media #{$small-and-down} {
+      margin-top: 1rem;
+    }
   }
 }
 
@@ -151,6 +160,12 @@
 .fundo-icones {
   background: url("../img/fundos/icones.svg"), $branco;
   background-size: 50vw;
+  @media #{$medium-and-down} {
+    background-size: 100vw;
+  }
+  @media #{$small-and-down} {
+    background-size: 150vw;
+  }
 }
 
 .altura-80vh {font-family: 'Open Sans', sans-serif;

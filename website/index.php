@@ -118,7 +118,7 @@
     <div class="faca-voce-tambem">
       <div class="container altura-80vh">
         <div class="row altura-80vh">
-          <div class="col s12 m6 landing-container  faca-voce-tambem-container altura-80vh">
+          <div class="col s12 m8 l7 landing-container  faca-voce-tambem-container altura-80vh">
             <h2 class="titulo paleta-text text-branco fadeIn">Se interessou? Faça parte do projeto!</h2>
             <p class="texto paleta-text text-branco fadeIn">Como o objetivo da Lixeira Inteligete é auxiliar no processo de separação e reciclagem, ele foi totalmente desenvolvido com a licença <a class="link-branco" href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html" target="_blank">GPL v3</a> em mente. E o que isso significa? Isso significa que TODO o projeto está disponibilizado em um repositório na <a class="link-branco" href="https://github.com/MateuxLucax/lixeira-inteligente" target="_blank">GitHub</a>, e com isso, além de ter acesso a todos os documentos, arquivos e códigos do projeto, você pode também, sugerir alterações nos mesmos, e assim contribuir com o desenvolvimento, legal não? Então vamos lá, e nos ajude a transformar o mundo!</p>
           </div>

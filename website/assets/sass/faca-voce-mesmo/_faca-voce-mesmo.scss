@@ -49,7 +49,11 @@
     display: grid !important;
     -ms-flex-line-pack: center !important;
         align-content: center !important;
-    justify-items: center !important;
+    justify-items: right !important;
+    @media #{$small-and-down} {
+      margin: 0;
+      justify-items: center !important;
+    }
   }
 }
 

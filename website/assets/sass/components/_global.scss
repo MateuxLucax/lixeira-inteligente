@@ -227,6 +227,10 @@ video.responsive-video {
       font-size: 1.2rem;
       padding: 0 10px;
       line-height: 30px;
+      transition: color .3s ease;
+      &:hover {
+        color: rgba(#444, .75);
+      }
     }
 
     &.active a { color: #fff; }

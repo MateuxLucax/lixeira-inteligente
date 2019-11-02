@@ -1,0 +1,10 @@
+.img-container {
+  background: #FFF;
+  width: 100%;
+  border: .3rem solid $primary-color;
+  border-radius: .5rem;
+  padding: 1rem;
+  & img {
+    width: 100%;
+  }
+}
