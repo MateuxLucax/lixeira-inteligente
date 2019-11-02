@@ -27,5 +27,5 @@ Como o objetivo da Lixeira Inteligete é auxiliar no processo de separação e r
 
 ## License
 
-Este projeto está sob a licença GPL v3, olhe o arquivo [LICENSE.md](LICENSE.md) para mais detalhes
+Este projeto está sob a licença LGPL-3, olhe o arquivo [LICENSE.md](LICENSE.md) para mais detalhes
 
