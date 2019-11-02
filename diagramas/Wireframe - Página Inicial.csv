@@ -1,0 +1,15 @@
+Id,Nome,Biblioteca de formas,ID da p´ágina,Contido por,Grupo,Área de texto 1,Área de texto 2
+1,Página,,,,,Página 1 ,
+2,Janela de Navegador,Maquetes IU,1,,,Página Inicial - Lixeira Inteligente,https://lixeirainteligente.com
+3,Texto,Padrão,1,2,,Logo,
+4,Texto,Padrão,1,2,,Banner,
+5,Texto,Padrão,1,2,,CONTATO,
+6,Texto,Padrão,1,2,,SOBRE,
+7,Texto,Padrão,1,2,,FAÇA VOCÊ MESMO,
+8,Texto,Padrão,1,2,,"Contador com quantidade de lixos já separados 
+por lixeiras inteligentes conectadas",
+9,Texto,Padrão,1,2,,O que é,
+10,Texto,Padrão,1,2,,Como funciona,
+11,Texto,Padrão,1,2,,Faça voce também + Link do repositório,
+12,Texto,Padrão,1,2,,Lixeira Inteligente,
+13,Texto,Padrão,1,2,,Licença GPL v3,

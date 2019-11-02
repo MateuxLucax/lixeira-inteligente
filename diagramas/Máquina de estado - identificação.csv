@@ -1,0 +1,10 @@
+Id,Nome,Biblioteca de formas,ID da p´ágina,Contido por,Grupo,Origem da linha,Destino da linha,Seta de origem,Seta de destino,Área de texto 1
+1,Página,,,,,,,,,Página 1
+2,Exterminador,Formas de Fluxograma,1,,,,,,,Lendo sensor
+3,Exterminador,Formas de Fluxograma,1,,,,,,,Identifica material
+4,Exterminador,Formas de Fluxograma,1,,,,,,,Acionando atuadores
+5,Exterminador,Formas de Fluxograma,1,,,,,,,Aguarda
+6,Linha,,1,,,3,4,None,Arrow,Material Identificado
+7,Linha,,1,,,4,5,None,Arrow,Servos atuados
+8,Linha,,1,,,2,3,None,Arrow,Leitura verdadeira
+9,Linha,,1,,,5,2,None,Arrow,5 segundos

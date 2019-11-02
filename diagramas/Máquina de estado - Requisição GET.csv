@@ -1,0 +1,8 @@
+Id,Nome,Biblioteca de formas,ID da p´ágina,Contido por,Grupo,Origem da linha,Destino da linha,Seta de origem,Seta de destino,Área de texto 1
+1,Página,,,,,,,,,Página 1
+2,Exterminador,Formas de Fluxograma,1,,,,,,,Lendo
+3,Exterminador,Formas de Fluxograma,1,,,,,,,Requisitando
+4,Exterminador,Formas de Fluxograma,1,,,,,,,Aguardando
+5,Linha,,1,,,2,3,None,Arrow,Leitura verdadeira
+6,Linha,,1,,,3,4,None,Arrow,Requisição bem sucedida
+7,Linha,,1,,,4,2,None,Arrow,3 segundos

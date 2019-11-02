@@ -135,7 +135,7 @@
     <div class="footer-copyright">
       <div class="container fadeIn">
       © <?php echo date("Y")?> Lixeira Inteligente
-      <a class="right fadeIn" href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html" target="_blank">GPL v3</a>
+      <a class="right fadeIn" href="https://opensource.org/licenses/lgpl-3.0.html" target="_blank">LGPL-3.0</a>
       </div>
     </div>
   </footer>
