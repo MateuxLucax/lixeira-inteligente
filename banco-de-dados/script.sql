@@ -1,7 +1,7 @@
-USE `u629327027_count`;
+USE `**`;
 
 CREATE TABLE IF NOT EXISTS `log` (
-	`id` INT PRIMARY KEY AUTO_INCREMENT, 
+    `id` INT PRIMARY KEY AUTO_INCREMENT, 
     `data` DATE NOT NULL,
     `horario` TIME NOT NULL
 );
@@ -17,8 +17,7 @@ AFTER INSERT ON `log`
 FOR EACH ROW
 BEGIN
 	DECLARE qtd INT DEFAULT 0;
-	SET qtd = (SELECT `quantidade` FROM `contador` WHERE `id` = 1);
-	UPDATE `contador` SET `quantidade` = (qtd + 1) WHERE `id` = 1;
+	UPDATE `contador` SET `quantidade` = (`quantidade` + 1) WHERE `id` = 1;
 END
 $$
 DELIMITER ;
@@ -30,7 +29,7 @@ FOR EACH ROW
 BEGIN
 	DECLARE qtd INT DEFAULT 0;
 	SET qtd = (SELECT `quantidade` FROM `contador` WHERE `id` = 1);
-	UPDATE `contador` SET `quantidade` = (qtd - 1) WHERE `id` = 1;
+	UPDATE `contador` SET `quantidade` = (`quantidade` - 1) WHERE `id` = 1;
 END
 $$
 DELIMITER ;
