@@ -48,9 +48,19 @@ void setup() {
 }
 
 void loop() {
-  leituraPapel = digitalRead(pinoPapel);
-  leituraVidro = digitalRead(pinoVidro);
-  leituraMetal = digitalRead(pinoMetal);
+
+  if (leituraPapelEstado == LOW) {
+    leituraPapel = digitalRead(pinoPapel);
+  }
+  if (leituraVidroEstado == LOW) {
+    leituraVidro = digitalRead(pinoVidro);
+  }
+  if (leituraPapelEstado == LOW) {
+    leituraPapel = digitalRead(pinoPapel);
+  }
+  if (leituraMetalEstado == LOW) {
+    leituraMetal = digitalRead(pinoMetal);
+  }
 
   if (leituraPapel == HIGH) {
     leituraPapelEstado = HIGH;
@@ -77,6 +87,7 @@ void loop() {
       executarPlastico();
     }
     reinicializarValoresEstado();
+    servo4(true);
     processando();
   }
 
@@ -120,13 +131,10 @@ void executarPlastico() {
 }
 
 void reinicializarValoresEstado() {
-  delay(1000);  
   leituraPapelEstado = LOW;
   leituraVidroEstado = LOW;
   leituraMetalEstado = LOW;
-  delay(5000);
   lcd.clear();
-  delay(1000);
 }
 
 // Funções dos servos
