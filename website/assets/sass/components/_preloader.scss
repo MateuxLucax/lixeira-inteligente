@@ -30,8 +30,8 @@
 .preloader-wrapper {
   display: inline-block;
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 96px;
+  height: 128px;
 
   &.small {
     width: 36px;
@@ -39,8 +39,8 @@
   }
 
   &.big {
-    width: 64px;
-    height: 64px;
+    width: 96px;
+    height: 96px;
   }
 
   &.active {
@@ -68,7 +68,7 @@
 
 .spinner-blue,
 .spinner-blue-only {
-  border-color: #4285f4;
+  border-color: #1A5167;
 }
 
 .spinner-red,

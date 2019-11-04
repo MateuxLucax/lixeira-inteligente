@@ -1,5 +1,7 @@
 <?php 
 
+  $contar = isset($_GET['contar']) ? $_GET['contar'] : '';
+
   function contador() {
     try {
       include_once("conexao.php");
@@ -13,14 +15,18 @@
       if (count($resultado)) { 
         foreach($resultado as $linha) {
           $quantidade = $linha[0]; 
+          $stmt = null;
+          $pdo = null;
+          return '<h2 class="contador-numeros fadeIn">'. $quantidade. '</h2>';
         }
       }
     } catch(PDOException $e) {
-        echo 'ERROR: ' . $e->getMessage();
+        return '<p class="mensagem-de-erro">Erro ao tentar realizar a contagem :(</p>';
     }
-    $stmt = null;
-    $pdo = null;
-    return $quantidade;
   }
  
+  if ($contar == true) {
+    echo contador();
+  }
+
 ?>

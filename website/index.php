@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<?php 
-  /* Código necessário para capturar a quantidade de resíduos já separados por lixeiras inteligentes conectadas ao servidor */
-  include_once ("funcoes/contador.php");
-  $quantidadeSeparada = contador();
-?>
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -104,8 +98,7 @@
     <div class="contador">
       <div class="row altura-60vh">
         <div class="container altura-60vh">
-          <div class="col s12 m6 altura-60vh contador-container center">
-            <h2 class="contador-numeros fadeIn"><?php echo $quantidadeSeparada; ?></h2>
+          <div class="col s12 m6 altura-60vh contador-container center" id="quantidadeSeparada">
           </div>
           <div class="col s12 m6 altura-60vh contador-container">
             <h3 class="contador-subtitle fadeIn">Resíduos já foram identificados por lixeiras conectadas!</h3>
@@ -143,9 +136,48 @@
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
+
+    function CriaRequest() {
+      try {
+        request = new XMLHttpRequest();        
+      } catch (IEAtual){
+        try {
+          request = new ActiveXObject("Msxml2.XMLHTTP");       
+        } catch(IEAntigo){
+          try {
+            request = new ActiveXObject("Microsoft.XMLHTTP");          
+          } catch(falha) {
+            request = false;
+          }
+        }
+      }  
+      if (!request) 
+        alert("Seu Navegador não suporta Ajax!");
+      else
+        return request;
+    }
+
+    function getQuantidade() {
+      var result = document.getElementById("quantidadeSeparada");
+      var xmlreq = CriaRequest();
+      result.innerHTML = '<div class="rodandoContainer fadeIn"><div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div></div>';
+      xmlreq.open("GET", "funcoes/contador.php?contar=true", true);
+      xmlreq.onreadystatechange = function(){
+          if (xmlreq.readyState == 4) {
+              if (xmlreq.status == 200) {
+                  result.innerHTML = xmlreq.responseText;
+              } else {
+                  result.innerHTML = '<p class="mensagem-de-erro">Erro ao tentar realizar a contagem :(</p>';
+              }
+          }
+      };
+      xmlreq.send();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.sidenav');
       var instances = M.Sidenav.init(elems, {edge: 'right'});
+      getQuantidade();
     });
   </script>
 </body>

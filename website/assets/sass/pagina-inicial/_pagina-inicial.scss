@@ -240,3 +240,20 @@
     border-bottom: .05rem solid rgba($branco, .75);
   }
 }
+
+.rodandoContainer {
+  @media #{$small-and-down} {
+    margin-top: 4rem;
+  }
+}
+
+.mensagem-de-erro {
+  color: $secondary-color-dark;
+  font-size: 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  @media #{$small-and-down} {
+    padding-top: 3rem;
+    font-size: 1.5rem;
+  }
+}
