@@ -14,9 +14,9 @@
   <link rel="stylesheet" href="assets/css/lixeira-inteligente.css" />
 
   <!-- Fontes -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" /> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  
+
 
 </head>
 
@@ -44,11 +44,11 @@
       <li class="sidenav-img"><img src="assets/img/componentes/logo.svg" alt="Lixeira Inteligente"></li>
       <li class="sidenav-title">Lixeira Inteligente</li>
       <li><div class="divider"></div></li>
-      <li><a class="waves-effect" href="./"><i class="material-icons">memory</i>Faça você mesmo</a></li>
-      <li><a class="waves-effect" href="../sobre/"><i class="material-icons">info</i>Sobre</a></li>
-      <li><a class="waves-effect" href="../1contato/"><i class="material-icons">mail</i>Contato</a></li>
+      <li><a class="waves-effect" href="faca-voce-meso/"><i class="material-icons">memory</i>Faça você mesmo</a></li>
+      <li><a class="waves-effect" href="sobre/"><i class="material-icons">info</i>Sobre</a></li>
+      <li><a class="waves-effect" href="contato/"><i class="material-icons">mail</i>Contato</a></li>
     </ul>
-        
+
   </header>
 
   <main>
@@ -105,7 +105,7 @@
             <p class="texto contador-text fadeIn">Após montar a sua Lixeira Inteligente, ajude este número a crescer e adicione um módulo para conectá-la a internet. Você verá que é muito mais simples do que parece.</p>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
 
     <div class="faca-voce-tambem">
@@ -113,7 +113,7 @@
         <div class="row altura-80vh">
           <div class="col s12 m8 l7 landing-container  faca-voce-tambem-container altura-80vh">
             <h2 class="titulo paleta-text text-branco fadeIn">Se interessou? Faça parte do projeto!</h2>
-            <p class="texto paleta-text text-branco fadeIn">Como o objetivo da Lixeira Inteligete é auxiliar no processo de separação e reciclagem, ele foi totalmente desenvolvido com a licença <a class="link-branco" href="https://www.gnu.org/licenses/gpl-3.0.pt-br.html" target="_blank">GPL v3</a> em mente. E o que isso significa? Isso significa que TODO o projeto está disponibilizado em um repositório na <a class="link-branco" href="https://github.com/MateuxLucax/lixeira-inteligente" target="_blank">GitHub</a>, e com isso, além de ter acesso a todos os documentos, arquivos e códigos do projeto, você pode também, sugerir alterações nos mesmos, e assim contribuir com o desenvolvimento, legal não? Então vamos lá, e nos ajude a transformar o mundo!</p>
+            <p class="texto paleta-text text-branco fadeIn">Como o objetivo da Lixeira Inteligete é auxiliar no processo de separação e reciclagem, ele foi totalmente desenvolvido com a licença <a class="link-branco" href="https://opensource.org/licenses/lgpl-3.0.html" target="_blank">LGPL-3.0</a> em mente. E o que isso significa? Isso significa que TODO o projeto está disponibilizado em um repositório na <a class="link-branco" href="https://github.com/MateuxLucax/lixeira-inteligente" target="_blank">GitHub</a>, e com isso, além de ter acesso a todos os documentos, arquivos e códigos do projeto, você pode também, sugerir alterações nos mesmos, e assim contribuir com o desenvolvimento, legal não? Então vamos lá, e nos ajude a transformar o mundo!</p>
           </div>
           <div class="col s12 m4 l5 altura-80vh  landing-container faca-voce-tambem-container justify-right-grid">
             <img class="o-que-e-img fadeIn" src="assets/img/pagina-inicial/open-source.svg" alt="Open Source">
@@ -139,19 +139,19 @@
 
     function CriaRequest() {
       try {
-        request = new XMLHttpRequest();        
+        request = new XMLHttpRequest();
       } catch (IEAtual){
         try {
-          request = new ActiveXObject("Msxml2.XMLHTTP");       
+          request = new ActiveXObject("Msxml2.XMLHTTP");
         } catch(IEAntigo){
           try {
-            request = new ActiveXObject("Microsoft.XMLHTTP");          
+            request = new ActiveXObject("Microsoft.XMLHTTP");
           } catch(falha) {
             request = false;
           }
         }
-      }  
-      if (!request) 
+      }
+      if (!request)
         alert("Seu Navegador não suporta Ajax!");
       else
         return request;
