@@ -15,7 +15,7 @@
 
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="assets/css/lixeira-inteligente-icons.css" rel="stylesheet" />
 
 
 </head>
@@ -29,7 +29,7 @@
       <nav>
         <div class="nav-wrapper container fadeIn">
           <a href="./" class="brand-logo"><img src="assets/img/componentes/logo.svg" alt="Lixeira Inteligente"></a>
-          <a href="" data-target="menu-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <a href="" data-target="menu-mobile" class="sidenav-trigger"><i class="material-icons"><i class="icon-menu"></i></i></a>
           <ul class="right hide-on-med-and-down">
             <li><a class="waves-effect" href="faca-voce-mesmo/">Faça você mesmo</a></li>
             <li><a class="waves-effect" href="../sobre/">Sobre</a></li>
@@ -44,9 +44,9 @@
       <li class="sidenav-img"><img src="assets/img/componentes/logo.svg" alt="Lixeira Inteligente"></li>
       <li class="sidenav-title">Lixeira Inteligente</li>
       <li><div class="divider"></div></li>
-      <li><a class="waves-effect" href="faca-voce-meso/"><i class="material-icons">memory</i>Faça você mesmo</a></li>
-      <li><a class="waves-effect" href="sobre/"><i class="material-icons">info</i>Sobre</a></li>
-      <li><a class="waves-effect" href="contato/"><i class="material-icons">mail</i>Contato</a></li>
+      <li><a class="waves-effect" href="faca-voce-meso/"><i class="material-icons"><i class="icon-toolbox"></i></i>Faça você mesmo</a></li>
+      <li><a class="waves-effect" href="sobre/"><i class="material-icons"><i class="icon-info"></i></i>Sobre</a></li>
+      <li><a class="waves-effect" href="contato/"><i class="material-icons"><i class="icon-envelope"></i></i>Contato</a></li>
     </ul>
 
   </header>
@@ -127,61 +127,21 @@
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container fadeIn">
-      © <?php echo date("Y")?> Lixeira Inteligente
+      © <span id="ano"></span> Lixeira Inteligente
       <a class="right fadeIn" href="https://opensource.org/licenses/lgpl-3.0.html" target="_blank">LGPL-3.0</a>
       </div>
     </div>
   </footer>
 
   <!-- JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="assets/js/lixeira-inteligente.min.js"></script>
+  <script src="assets/js/contador.min.js"></script>
+  <script src="assets/js/init.min.js"></script>
   <script>
-
-    function CriaRequest() {
-      try {
-        request = new XMLHttpRequest();
-      } catch (IEAtual){
-        try {
-          request = new ActiveXObject("Msxml2.XMLHTTP");
-        } catch(IEAntigo){
-          try {
-            request = new ActiveXObject("Microsoft.XMLHTTP");
-          } catch(falha) {
-            request = false;
-          }
-        }
-      }
-      if (!request)
-        alert("Seu Navegador não suporta Ajax!");
-      else
-        return request;
-    }
-
-    function getQuantidade() {
-      var result = document.getElementById("quantidadeSeparada");
-      var xmlreq = CriaRequest();
-      result.innerHTML = '<div class="rodandoContainer fadeIn"><div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div></div>';
-      xmlreq.open("GET", "funcoes/contador.php?contar=true", true);
-      xmlreq.onreadystatechange = function(){
-          if (xmlreq.readyState == 4) {
-              if (xmlreq.status == 200) {
-                  result.innerHTML = xmlreq.responseText;
-              } else {
-                  result.innerHTML = '<p class="mensagem-de-erro">Erro ao tentar realizar a contagem :(</p>';
-              }
-          }
-      };
-      xmlreq.send();
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = M.Sidenav.init(elems, {edge: 'right'});
-    });
-    window.addEventListener('load', function() {
-      getQuantidade();
-    });
-  </script>
+      window.addEventListener('load', function() {
+        contador();
+      });
+    </script>
 </body>
 
 </html>

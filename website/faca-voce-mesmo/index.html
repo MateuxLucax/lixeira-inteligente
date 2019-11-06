@@ -15,7 +15,7 @@
 
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" /> 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="" rel="stylesheet" />
   
 
 </head>
@@ -127,7 +127,7 @@
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container fadeIn">
-      © <?php echo date("Y")?> Lixeira Inteligente
+      © <span id="ano"></span> Lixeira Inteligente
       <a class="right fadeIn" href="https://opensource.org/licenses/lgpl-3.0.html" target="_blank">LGPL-3.0</a>
       </div>
     </div>
@@ -135,12 +135,7 @@
 
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = M.Sidenav.init(elems, {edge: 'right'});
-    });
-  </script>
+  <script src="../assets/js/init.min.js"></script>
 </body>
 
 </html>
