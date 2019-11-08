@@ -15,7 +15,7 @@
       if (count($resultado)) { 
         foreach($resultado as $linha) {
           $quantidade = $linha[0]; 
-          $stmt = null;
+          $stmt = null; 
           $pdo = null;
           return '<h2 class="contador-numeros fadeIn">'. $quantidade. '</h2>';
         }

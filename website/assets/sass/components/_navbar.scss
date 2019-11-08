@@ -59,7 +59,7 @@ nav {
   // Logo
   .brand-logo {
     position: absolute; 
-    padding-top: .15rem;
+    align-self: center;
     color: $navbar-font-color;
     display: grid;
     font-size: $navbar-brand-font-size;
@@ -74,7 +74,7 @@ nav {
 
     & img {
       display: inherit;
-      margin-top: .15rem;
+      align-self: center;
       height: $navbar-height;
     }
 

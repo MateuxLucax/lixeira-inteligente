@@ -16,8 +16,8 @@
         align-content: center !important;
   }
   &-title {
-    -webkit-animation: fadeInRight 1s ease-in-out;
-            animation: fadeInRight 1s ease-in-out;
+    -webkit-animation: fadeInRight .5s ease-in-out;
+            animation: fadeInRight .5s ease-in-out;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 5rem;
@@ -28,8 +28,8 @@
     }
   }
   &-subtitle {
-    -webkit-animation: fadeInRight 1s ease-in-out;
-            animation: fadeInRight 1s ease-in-out;
+    -webkit-animation: fadeInRight .5s ease-in-out;
+            animation: fadeInRight .5s ease-in-out;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 2rem;
@@ -40,8 +40,8 @@
     }
   }
   &-img {
-    -webkit-animation: fadeInLeft 1s ease-in-out;
-            animation: fadeInLeft 1s ease-in-out;
+    -webkit-animation: fadeInLeft .5s ease-in-out;
+            animation: fadeInLeft .5s ease-in-out;
     display: inherit;
     width: 100%;
     -ms-flex-line-pack: center;
@@ -50,9 +50,10 @@
 }
 
 .o-que-e {
-  background: url("../img/fundos/icones.svg"), $branco;
-  background-size: 50vw;
+  @extend .fundo-icones;
   min-height: 50vh;
+  -webkit-transform-origin: left;
+          transform-origin: left;
   -webkit-transform: skewY(-3deg);
           transform: skewY(-3deg);
   & .row {
@@ -60,7 +61,6 @@
             transform: skewY(3deg);
   }
   &-container {
-    margin-top: -5vh;
     display: grid !important;
     -ms-flex-line-pack: center !important;
         align-content: center !important;
@@ -80,7 +80,8 @@
   }
   @media #{$small-and-down} {
     &-img {
-      width: 60%;
+      min-height: 0;
+      width: 40%;
     }
   }
 }
@@ -89,6 +90,8 @@
   background-image: -webkit-gradient(linear, left top, right bottom, from(#2b6c4f), color-stop(#307f58), color-stop(#369160), color-stop(#3ea568), to(#49b86e));
   background-image: linear-gradient(to right bottom, #2b6c4f, #307f58, #369160, #3ea568, #49b86e);
   min-height: 70vh;
+  -webkit-transform-origin: left;
+          transform-origin: left;
   -webkit-transform: skewY(-3deg);
           transform: skewY(-3deg);
   & .row {
@@ -98,9 +101,10 @@
 }
 
 .contador {
-  background: url("../img/fundos/icones.svg"), $branco;
-  background-size: 50vw;
+  @extend .fundo-icones;
   min-height: 60vh;
+  -webkit-transform-origin: left;
+          transform-origin: left;
   -webkit-transform: skewY(-3deg);
           transform: skewY(-3deg);
   & .row {
@@ -108,7 +112,6 @@
             transform: skewY(3deg);
   }
   &-container {
-    margin-top: -2.5vh;
     display: grid !important;
     -ms-flex-line-pack: center !important;
         align-content: center !important;
@@ -126,13 +129,13 @@
     padding-bottom: 2rem;
   }
   &-numeros {
-    margin-top: -1rem;
     color: $secondary-color-dark;
     font-size: 10rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    margin: 0;
     @media #{$small-and-down} {
-      margin-top: 1rem;
+      margin-top: 4rem;
     }
   }
 }
@@ -149,22 +152,16 @@
     -webkit-transform: skewY(3deg);
             transform: skewY(3deg);
   }
-  &-container {
-    margin-top: -2.5vh;
-    @media #{$small-and-down} {
-      margin-top: 0;
-    }
-  }
 }
 
 .fundo-icones {
   background: url("../img/fundos/icones.svg"), $branco;
-  background-size: 50vw;
+  background-size: 12.5vw;
   @media #{$medium-and-down} {
-    background-size: 100vw;
+    background-size: 25vw;
   }
   @media #{$small-and-down} {
-    background-size: 150vw;
+    background-size: 50vw;
   }
 }
 
@@ -231,13 +228,14 @@
 
 .link-branco {
   display:inline-block;
-  border-bottom: .05rem solid $branco;
+  border-bottom: .15rem solid $branco;
   color: $branco;
+  font-weight: 600;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   &:hover {
     color: rgba($branco, .75);
-    border-bottom: .05rem solid rgba($branco, .75);
+    border-bottom: .15rem solid rgba($branco, .75);
   }
 }
 
@@ -256,4 +254,11 @@
     padding-top: 3rem;
     font-size: 1.5rem;
   }
+}
+
+.altura-50vh {
+  min-height: 50vh !important;
+  @media #{$small-and-down} {
+    min-height: 0 !important;
+  } 
 }
