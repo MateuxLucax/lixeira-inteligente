@@ -50,7 +50,6 @@
 }
 
 .o-que-e {
-  @extend .fundo-icones;
   min-height: 50vh;
   -webkit-transform-origin: left;
           transform-origin: left;
@@ -101,7 +100,6 @@
 }
 
 .contador {
-  @extend .fundo-icones;
   min-height: 60vh;
   -webkit-transform-origin: left;
           transform-origin: left;
@@ -120,9 +118,9 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 3rem;
-    color: $primary-color;
     @media #{$small-and-down} {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
+      text-align: center;
     }
   }
   &-text {
@@ -152,113 +150,4 @@
     -webkit-transform: skewY(3deg);
             transform: skewY(3deg);
   }
-}
-
-.fundo-icones {
-  background: url("../img/fundos/icones.svg"), $branco;
-  background-size: 12.5vw;
-  @media #{$medium-and-down} {
-    background-size: 25vw;
-  }
-  @media #{$small-and-down} {
-    background-size: 50vw;
-  }
-}
-
-.altura-80vh {font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 4rem;
-  color: $primary-color;
-  @media #{$small-and-down} {
-    font-size: 2.5rem;
-  }
-  min-height: 80vh !important;
-  @media #{$small-and-down} {
-    min-height: 0 !important;
-  }
-}
-
-.altura-60vh {
-  min-height: 60vh !important;
-  @media #{$small-and-down} {
-    min-height: 0 !important;
-  }
-}
-
-.altura-70vh {
-  min-height: 70vh !important;
-  @media #{$small-and-down} {
-    min-height: 0 !important;
-  }
-}
-
-.titulo {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 4rem;
-  @media #{$small-and-down} {
-    font-size: 2.5rem;
-  }
-}
-
-.titulo-menor {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 3.5rem;
-  @media #{$small-and-down} {
-    font-size: 2rem;
-  }
-  @media #{$medium-only} {
-    font-size: 2.5rem;
-  }
-}
-
-.justify-right-grid {
-  justify-items: right !important;
-  @media #{$small-and-down} {
-    justify-items: center !important;  
-  }
-}
-
-.texto {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 1.25rem;
-}
-
-.link-branco {
-  display:inline-block;
-  border-bottom: .15rem solid $branco;
-  color: $branco;
-  font-weight: 600;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  &:hover {
-    color: rgba($branco, .75);
-    border-bottom: .15rem solid rgba($branco, .75);
-  }
-}
-
-.rodandoContainer {
-  @media #{$small-and-down} {
-    margin-top: 4rem;
-  }
-}
-
-.mensagem-de-erro {
-  color: $secondary-color-dark;
-  font-size: 3rem;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  @media #{$small-and-down} {
-    padding-top: 3rem;
-    font-size: 1.5rem;
-  }
-}
-
-.altura-50vh {
-  min-height: 50vh !important;
-  @media #{$small-and-down} {
-    min-height: 0 !important;
-  } 
 }

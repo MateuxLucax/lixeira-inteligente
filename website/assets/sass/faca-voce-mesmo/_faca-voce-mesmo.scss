@@ -28,16 +28,15 @@
   }
 }
 
-.altura-40vh {
-  min-height: 40vh !important;
-}
-
 .o-que-vai-precisar {
   min-height: 80vh;
+  margin-bottom: 3vh;
 }
 
 .iniciar-passo-a-passo {
   min-height: 60vh;
+  -webkit-transform-origin: left;
+          transform-origin: left;
   -webkit-transform: skewY(-3deg);
           transform: skewY(-3deg);
   & .row {
@@ -50,17 +49,10 @@
     -ms-flex-line-pack: center !important;
         align-content: center !important;
     justify-items: right !important;
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
       margin: 0;
       justify-items: center !important;
     }
-  }
-}
-
-.altura-80vh-hide {
-  min-height: 80vh !important;
-  @media #{$medium-and-down} {
-    min-height: 0 !important;
   }
 }
 

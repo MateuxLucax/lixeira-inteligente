@@ -4,10 +4,8 @@
 
   function contador() {
     try {
-      include_once("conexao.php");
-      $pdo = new PDO("$db_driver:host=$db_host; dbname=$db_nome", $db_usuario, $db_senha);
-      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $pdo->exec("SET NAMES utf8");
+      include_once("conexao.class.php");
+      $pdo = Conexao::conexao();
       $sql = "SELECT `quantidade` FROM `contador` WHERE id = 1";
       $stmt = $pdo->prepare($sql);
       $stmt->execute();

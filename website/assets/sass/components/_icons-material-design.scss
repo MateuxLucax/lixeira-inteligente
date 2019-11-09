@@ -3,3 +3,26 @@
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga';
 }
+
+// Fonte personalizada
+@font-face {
+  font-family: 'lixeira inteligente';
+  src: url('../fonts/lixeira-inteligente.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+[class*='icon-']:before {
+ font-family: 'lixeira inteligente';
+ font-style: normal;
+ font-weight: normal;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale
+}
+
+.icon-left-chevron:before{content:'\0041';}
+.icon-right-chevron:before{content:'\0042';}
+.icon-menu:before{content:'\0043';}
+.icon-toolbox:before{content:'\0044';}
+.icon-envelope:before{content:'\0045';}
+.icon-info:before{content:'\0046';}

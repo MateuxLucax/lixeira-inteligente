@@ -18,6 +18,7 @@ nav {
   width: 100%;
   height: $navbar-height-mobile;
   line-height: $navbar-line-height-mobile;
+  @extend .z-depth-2;
 
   a { color: $navbar-font-color; }
 
