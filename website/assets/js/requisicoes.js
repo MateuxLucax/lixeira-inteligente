@@ -61,6 +61,9 @@ function atualizarContador() {
 
 function entrarContato(nome, email, conteudo) {
   var xmlreq = CriaRequest();
+  var nome = document.getElementById("nome").value;
+  var email = document.getElementById("email").value;
+  var conteudo = document.getElementById("mensagem").value;
 
   xmlreq.open("GET", "../funcoes/email/mail.php" + "?nome=" + nome + "&email=" + email + "&conteudo=" + conteudo, true);
   xmlreq.onreadystatechange = function(){

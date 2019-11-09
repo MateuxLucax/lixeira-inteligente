@@ -18,13 +18,12 @@
       $cabecalho .= "Content-type:text/html;charset=UTF-8" . "\r\n";
       $cabecalho .= 'From: '. $nome. ' <'. $email. '>' . "\r\n";
       $cabecalho .= "Reply-To: ". $email. "\r\n";
-      $cabecalho .= 'X-Mailer: PHP/' . phpversion();
       
       mail($destinatario, $assunto, $mensagem, $cabecalho);
-      return true;
+      echo 'true';
 
     } catch (Exception $e) {
-      return false;
+      echo 'false';
     }
 
   }
@@ -34,7 +33,7 @@
   $conteudo = isset($_GET['conteudo']) ? $_GET['conteudo'] : false;
 
   if ($nome != false && $email != false && $conteudo != false) {
-    echo enviarMensagem($nome, $email, $conteudo);
+    enviarMensagem($nome, $email, $conteudo);
   } else {
     echo 'false';
   }
