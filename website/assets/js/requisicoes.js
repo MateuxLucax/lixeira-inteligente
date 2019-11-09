@@ -1,20 +1,26 @@
 function CriaRequest() {
   try {
+    // @ts-ignore
     request = new XMLHttpRequest();
   } catch (IEAtual){
     try {
+      // @ts-ignore
       request = new ActiveXObject("Msxml2.XMLHTTP");
     } catch(IEAntigo){
       try {
+        // @ts-ignore
         request = new ActiveXObject("Microsoft.XMLHTTP");
       } catch(falha) {
+        // @ts-ignore
         request = false;
       }
     }
   }
+  // @ts-ignore
   if (!request)
     alert("Seu Navegador não suporta Ajax!");
   else
+    // @ts-ignore
     return request;
 }
 
@@ -33,10 +39,10 @@ function contador() {
       }
   };
   xmlreq.send();
-  atualizar();
+  atualizarContador();
 }
 
-function atualizar() {
+function atualizarContador() {
   var result = document.getElementById("quantidadeSeparada");
   var xmlreq = CriaRequest();
   xmlreq.open("GET", "funcoes/contador.php?contar=true", true);
@@ -50,5 +56,36 @@ function atualizar() {
       }
   };
   xmlreq.send();
-  window.setTimeout(atualizar, 30000);
+  window.setTimeout(atualizarContador, 30000);
+}
+
+function entrarContato(nome, email, conteudo) {
+  var xmlreq = CriaRequest();
+
+  xmlreq.open("GET", "../funcoes/email/mail.php" + "?nome=" + nome + "&email=" + email + "&conteudo=" + conteudo, true);
+  xmlreq.onreadystatechange = function(){
+    if (xmlreq.readyState == 4) {
+      if (xmlreq.status == 200) {
+        if (xmlreq.responseText == 'false') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Ixi...',
+            text: 'Algo deu errado durante o envio da mensagem, tente novamente.'
+          })
+        } else {
+          Swal.fire({
+            icon: 'success',
+            title: 'Mensagem enviada'
+          })
+        }
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Ixi...',
+          text: 'Algo deu errado durante o envio da mensagem, tente novamente.'
+        })
+      }
+    }
+  };
+  xmlreq.send();
 }

@@ -1026,3 +1026,45 @@ td, th{
     min-height: 0 !important;
   }
 }
+
+.banner {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#49b86e), color-stop(#3ea568), color-stop(#369160), color-stop(#307f58), to(#2b6c4f));
+  background-image: linear-gradient(to right bottom, #49b86e, #3ea568, #369160, #307f58, #2b6c4f);
+  min-height: 40vh;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
+  & .row {
+    -webkit-transform: skewY(3deg);
+            transform: skewY(3deg);
+  }
+  &-container {
+    display: grid !important;
+    -ms-flex-line-pack: center !important;
+        align-content: center !important;
+    justify-items: center !important;
+  }
+  &-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 4.5rem;
+    text-align: center;
+    color: $branco;
+    @media #{$small-and-down} {
+      font-size: 3rem;
+    }
+  }
+}
+
+.botao {
+  @extend .z-depth-4;
+  background: $primary-color;
+  &:hover, &:focus {
+    background: $primary-color-dark;
+    @extend .z-depth-3;
+  }
+  &:active {
+    @extend .z-depth-0;
+  }
+}
