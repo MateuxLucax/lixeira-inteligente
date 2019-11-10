@@ -5,7 +5,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta name="theme-color" content="#f1edff"/>
   <title>Lixeira Inteligente</title>
+
+  <!-- Manifest -->
+  <link rel="manifest" href="assets/pwa/manifest.json">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="256x256" href="assets/img/componentes/favicon.png">
@@ -137,6 +141,11 @@
   <script>
       window.addEventListener('load', function() {
         contador();
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('assets/js/serviceWorker.min.js')
+          .then(reg => console.log('Registration success. Scope is ', reg.scope))
+          .catch(err => console.log('Registration failed. ', err));
+        }
       });
     </script>
 </body>
