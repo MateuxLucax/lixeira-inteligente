@@ -35,8 +35,8 @@
 // ==========================================================================
 
 $primary-color: #49B86E !default;
-$primary-color-light: #2B6C4F !default;
-$primary-color-dark: darken($primary-color, 10%) !default;
+$primary-color-light: lighten($primary-color, 10%) !default;
+$primary-color-dark: #2B6C4F !default;
 
 $secondary-color: #29718F !default;
 $secondary-color-light: lighten($secondary-color, 10%) !default;
@@ -170,12 +170,12 @@ $dropdown-item-height: 50px !default;
 
 // Text Inputs + Textarea
 $input-height: 3rem !default;
-$input-border-color: color("grey", "base") !default;
+$input-border-color: color("paleta", "preto") !default;
 $input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
-$input-focus-color: $primary-color !default;
+$input-focus-color: lighten($primary-color-dark, 5%) !default;
 $input-font-size: 16px !default;
 $input-margin-bottom: 8px;
 $input-margin: 0 0 $input-margin-bottom 0 !default;

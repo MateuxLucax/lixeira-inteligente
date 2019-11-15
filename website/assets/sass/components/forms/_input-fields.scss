@@ -315,7 +315,7 @@ textarea {
     overflow-y: hidden; /* prevents scroll bar flash */
     padding: .8rem 0 .8rem 0; /* prevents text jump on Enter keypress */
     resize: none;
-    min-height: $input-height;
+    min-height: 6.25rem !important;
     box-sizing: border-box;
   }
 }

@@ -28,6 +28,13 @@
   }
 }
 
+.softwares {
+  @media #{$medium-and-down} {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
 .o-que-vai-precisar {
   min-height: 80vh;
   margin-bottom: 3vh;
@@ -62,8 +69,9 @@
   width: -moz-max-content;
   width: max-content;
   @extend .z-depth-4;
+  background: $primary-color-dark;
   &:hover {
-    background: $primary-color-dark;
+    background: darken($primary-color-dark, 5%);
     @extend .z-depth-3;
   }
   &:active {

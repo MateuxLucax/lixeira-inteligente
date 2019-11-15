@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<!-- Feito por @mateuxlucax -->
-
 <head>
   <!-- meta tags de descrição -->
   <meta name="description" content="Lixeira Inteligente é um dispositivo simples e eficiente capaz de realizar separação de resíduos recicláveis." />
@@ -19,10 +17,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0"/>
   <meta name="theme-color" content="#f1edff"/>
   <title>Lixeira Inteligente</title>
-
-  <!-- Preload -->
-  <link rel="preload" href="assets/css/lixeira-inteligente.css" as="style">
-  <link rel="preload" href="assets/js/lixeira-inteligente.min.js" as="script">
 
   <!-- Manifest -->
   <link rel="manifest" href="manifest.json" />
@@ -120,24 +114,12 @@
       </div>
     </div>
 
-    <div class="contador">
-      <div class="row altura-60vh">
-        <div class="container altura-60vh">
-          <div class="col s12 m6 altura-60vh contador-container center" id="quantidadeSeparada"></div>
-          <div class="col s12 m6 altura-60vh contador-container">
-            <h3 class="contador-subtitle fadeIn paleta-text text-azul-escuro">Resíduos já foram identificados por lixeiras conectadas!</h3>
-            <p class="texto contador-text fadeIn">Após montar a sua Lixeira Inteligente, ajude este número a crescer e adicione um módulo para conectá-la a internet. Você verá que é muito mais simples do que parece.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="faca-voce-tambem">
+    <div class="paleta branco">
       <div class="container altura-80vh">
         <div class="row altura-80vh">
           <div class="col s12 m8 l7 landing-container  faca-voce-tambem-container altura-80vh">
-            <h2 class="titulo paleta-text text-branco fadeIn">Se interessou? Faça parte do projeto!</h2>
-            <p class="texto paleta-text text-branco fadeIn">Como o objetivo da Lixeira Inteligete é auxiliar no processo de separação e reciclagem, ele foi totalmente desenvolvido com a licença <a aria-label="Acesse a definição da licença LGPL-3" class="link-branco" href="https://opensource.org/licenses/lgpl-3.0.html" rel="noreferrer" target="_blank">LGPL-3.0</a> em mente. E o que isso significa? Isso significa que TODO o projeto está disponibilizado em um repositório na <a aria-label="Acesse o repositório da Lixeira Inteligente"  rel="noreferrer" class="link-branco" href="https://github.com/MateuxLucax/lixeira-inteligente" target="_blank">GitHub</a>, e com isso, além de ter acesso a todos os documentos, arquivos e códigos do projeto, você pode também, sugerir alterações nos mesmos, e assim contribuir com o desenvolvimento, legal não? Então vamos lá, e nos ajude a transformar o mundo!</p>
+            <h2 class="titulo paleta-text text-verde-escuro fadeIn">Se interessou? Faça parte do projeto!</h2>
+            <p class="texto paleta-text text-preto fadeIn">Como o objetivo da Lixeira Inteligete é auxiliar no processo de separação e reciclagem, ele foi totalmente desenvolvido com a licença <a aria-label="Acesse a definição da licença LGPL-3" class="link-verde-escuro" href="https://opensource.org/licenses/lgpl-3.0.html" rel="noreferrer" target="_blank">LGPL-3.0</a> em mente. E o que isso significa? Isso significa que TODO o projeto está disponibilizado em um repositório na <a aria-label="Acesse o repositório da Lixeira Inteligente"  rel="noreferrer" class="link-verde-escuro" href="https://github.com/MateuxLucax/lixeira-inteligente" target="_blank">GitHub</a>, e com isso, além de ter acesso a todos os documentos, arquivos e códigos do projeto, você pode também, sugerir alterações nos mesmos, e assim contribuir com o desenvolvimento, legal não? Então vamos lá, e nos ajude a transformar o mundo!</p>
           </div>
           <div class="col s12 m4 l5 altura-80vh  landing-container faca-voce-tambem-container justify-right-grid">
             <img class="o-que-e-img fadeIn" src="assets/img/pagina-inicial/open-source.svg" alt="Open Source">
@@ -162,15 +144,15 @@
   <script src="assets/js/requisicoes.min.js"></script>
   <script src="assets/js/init.min.js"></script>
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(reg => console.info('Service worker registrado', reg))
-        .catch(err => console.error('Erro ao registrar o service worker', err));
-    }
-    window.addEventListener('load', function() {
-      contador();
-    });
-  </script>
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('service-worker.js').then((reg) => {
+            console.log('Service worker registrado.', reg);
+          });
+        });
+      }
+    </script>
 </body>
 
 </html>

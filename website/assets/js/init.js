@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, {edge: 'right'});
+  try {
+    M.Sidenav.init(elems, {edge: 'right', inDuration: 150, outDuration: 150});
+  } catch(e) {};
   getAno();
 }); 
 function getAno() {

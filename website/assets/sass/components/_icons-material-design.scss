@@ -3,11 +3,9 @@
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga';
 }
-
-// Fonte personalizada
 @font-face {
   font-family: 'lixeira inteligente';
-  src: url('../fonts/lixeira-inteligente.woff') format('woff');
+  src: local(sans-serif), url('../fonts/lixeira-inteligente.woff') format('woff');
   font-style: normal;
   font-weight: normal;
 }

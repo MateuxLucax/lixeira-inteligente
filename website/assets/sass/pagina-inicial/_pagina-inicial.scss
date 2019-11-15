@@ -51,6 +51,9 @@
 
 .o-que-e {
   min-height: 50vh;
+  @media #{$small-and-down} {
+    min-height: 0 !important;
+  }
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transform: skewY(-3deg);
@@ -89,6 +92,9 @@
   background-image: -webkit-gradient(linear, left top, right bottom, from(#2b6c4f), color-stop(#307f58), color-stop(#369160), color-stop(#3ea568), to(#49b86e));
   background-image: linear-gradient(to right bottom, #2b6c4f, #307f58, #369160, #3ea568, #49b86e);
   min-height: 70vh;
+  @media #{$small-and-down} {
+    min-height: 0 !important;
+  }
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transform: skewY(-3deg);
@@ -101,6 +107,9 @@
 
 .contador {
   min-height: 60vh;
+  @media #{$small-and-down} {
+    min-height: 0 !important;
+  }
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transform: skewY(-3deg);
@@ -142,6 +151,9 @@
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2b6c4f), color-stop(#307f58), color-stop(#369160), color-stop(#3ea568), to(#49b86e));
   background-image: linear-gradient(to bottom, #2b6c4f, #307f58, #369160, #3ea568, #49b86e);
   min-height: 80vh;
+  @media #{$small-and-down} {
+    min-height: 0 !important;
+  }
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transform: skewY(-3deg);
