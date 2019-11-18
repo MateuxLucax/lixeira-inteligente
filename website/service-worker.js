@@ -1,8 +1,10 @@
-const staticCacheName = "lixeira-inteligente";
+var hoje = new Date();
+const staticCacheName = "lixeira-inteligente-" + hoje.getTime();
 const filesToCache = [
   // Páginas
   "index.html",
   "offline.html",
+  "sobre/index.html",
   "contato/index.html",
   "faca-voce-mesmo/index.html",
 
@@ -35,7 +37,6 @@ const filesToCache = [
 // Cache on install
 this.addEventListener("install", event => {
   this.skipWaiting();
-
   event.waitUntil(
     caches.open(staticCacheName)
       .then(cache => {
@@ -50,7 +51,7 @@ this.addEventListener('activate', event => {
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames
-          .filter(cacheName => (cacheName.startsWith('willian-justen-')))
+          .filter(cacheName => (cacheName.startsWith('lixeira-inteligente-')))
           .filter(cacheName => (cacheName !== staticCacheName))
           .map(cacheName => caches.delete(cacheName))
       );

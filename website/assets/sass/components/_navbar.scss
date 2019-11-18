@@ -132,13 +132,13 @@ nav {
       float: left;
       font-family: 'Open Sans', sans-serif;
       margin: 0;
-      font-weight: 600;
+      font-weight: 400;
       text-transform: uppercase;
       position: relative;
     }
     a {
       font-size: $navbar-font-size;
-      color: $navbar-font-color;
+      color: #2C7757;
       padding: 0 15px;
       text-decoration: none;
       text-align: center;
@@ -152,7 +152,7 @@ nav {
       }
 
       &:hover {
-        color: $primary-color-dark;
+        color: rgba($primary-color-dark, .7);
       }
 
       &:hover::before {
@@ -162,7 +162,7 @@ nav {
     }
   }
   .active {
-    color: $primary-color-dark;        
+    font-weight: 600;
   }
 
 }
