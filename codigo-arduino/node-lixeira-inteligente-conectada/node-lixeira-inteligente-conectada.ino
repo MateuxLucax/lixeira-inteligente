@@ -5,13 +5,13 @@
 #include <ESP8266HTTPClient.h>
 
 /* Configurações para conectar a rede Wi-Fi */
-const char *ssid = "********";  // Nome da rede
-const char *password = "********";    // Senha da rede
+const char *ssid = "IF_CATARINENSE";  // Nome da rede
+const char *password = "ifcatarinense";    // Senha da rede
 
 /* Configurações para a requisição */
 const char *host = "lixeirainteligente.com";                                                      // Host para realizar as requisições
 const int httpsPort = 443;                                                                        // Porta para requisições HTTPS
-const char fingerprint[] PROGMEM = "4B C6 C3 4C 13 85 B7 D2 88 8F 4A 7A 20 22 1A 23 C4 99 B5 0C"; // SHA1 fingerprint do host
+const char fingerprint[] PROGMEM = "C3 8F B2 AD 93 BE 69 AE DD 95 20 81 F9 AD 04 CC 71 45 2C BB"; // SHA1 fingerprint do host
  
 void setup() {
   pinMode(D1,INPUT);                      // Define o pino 1 como entrada
@@ -38,7 +38,7 @@ void loop() {
       r++;
     }
     String Link = "/adicionar-contador/dados.php?adicionar=true"; // Dados para serem enviados pela requisição GET
-    httpsClient.print(String("GET ") + Link + " HTTP/1.1\r\n" +
+    httpsClient.print(String("GET ") + Link + " HTTPx/1.1\r\n" +
                       "Host: " + host + "\r\n" +
                       "Connection: close\r\n\r\n");
     while (httpsClient.connected()) {
