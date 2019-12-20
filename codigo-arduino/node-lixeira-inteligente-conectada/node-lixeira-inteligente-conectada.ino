@@ -5,8 +5,8 @@
 #include <ESP8266HTTPClient.h>
 
 /* Configurações para conectar a rede Wi-Fi */
-const char *ssid = "IF_CATARINENSE";  // Nome da rede
-const char *password = "ifcatarinense";    // Senha da rede
+const char *ssid = "Familie Brandt";  // Nome da rede
+const char *password = "duarskit";    // Senha da rede
 
 /* Configurações para a requisição */
 const char *host = "lixeirainteligente.com";                                                      // Host para realizar as requisições
