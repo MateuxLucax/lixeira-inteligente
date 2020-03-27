@@ -1,7 +1,7 @@
 # Lixeira Inteligente
 
 <p align="center">
-  <img width="256" height="256" src="https://lixeirainteligente.com/assets/img/componentes/favicon.png">
+  <img width="256" height="256" src="https://raw.githubusercontent.com/MateuxLucax/lixeira-inteligente/master/website/assets/img/componentes/logo-img.png">
 </p>
 
 ## O que é?
