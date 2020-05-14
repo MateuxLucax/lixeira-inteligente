@@ -5,13 +5,13 @@
 #include <ESP8266HTTPClient.h>
 
 /* Configurações para conectar a rede Wi-Fi */
-const char *ssid = "Familie Brandt";  // Nome da rede
-const char *password = "duarskit";    // Senha da rede
+const char *ssid = "***";  // Nome da rede
+const char *password = "***";    // Senha da rede
 
 /* Configurações para a requisição */
-const char *host = "lixeirainteligente.com";                                                      // Host para realizar as requisições
-const int httpsPort = 443;                                                                        // Porta para requisições HTTPS
-const char fingerprint[] PROGMEM = "C3 8F B2 AD 93 BE 69 AE DD 95 20 81 F9 AD 04 CC 71 45 2C BB"; // SHA1 fingerprint do host
+const char *host = "lixeirainteligente.com";  // Host para realizar as requisições
+const int httpsPort = 443;                    // Porta para requisições HTTPS
+const char fingerprint[] PROGMEM = "***";     // SHA1 fingerprint do host
  
 void setup() {
   pinMode(D1,INPUT);                      // Define o pino 1 como entrada
