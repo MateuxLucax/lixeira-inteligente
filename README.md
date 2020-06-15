@@ -1,8 +1,8 @@
-# Lixeira Inteligente
-
 <p align="center">
   <img width="256" height="256" src="https://raw.githubusercontent.com/MateuxLucax/lixeira-inteligente/master/website/assets/img/componentes/logo-img.png">
 </p>
+
+# Lixeira Inteligente
 
 ## O que é?
 
