@@ -4,28 +4,29 @@
 
 # Lixeira Inteligente
 
-## O que é?
+## Description
 
-Com a crescente necessidade por reciclagem, a Lixeira Inteligente surge como um método simples e eficiênte de separação de resíduos recicláveis, tornando mais acessível e simples para as pessoas em suas casas, separarem corretamente os resíduos recicláveis que produz, e então, destinar corretamente a uma usina de reciclagem.
+With the growing need for recycling, the Intelligent Recycle Bin emerges as a simple and efficient method of separating recyclable waste, making it more accessible and simple for people in their homes, to properly separate the recyclable waste that it produces, and then to properly dispose of it. recycling plant.
 
-## Como funciona?
-O processo de separação é bem simples, consiste apenas em 3 sensores onde cada um detecta um tipo de material do resíduo, e 3 servomotores que levam cada resíduo para um compartimento diferente. Tudo isso, é gerenciado por um microcontrolador, que são responsáveis por determinar e destinar corretamente os resíduos conforme o seu material, apenas construa um módulo de identificação e separação por meio do passo a passo detalhado. Com isso, você irá montar a sua própria lixeira, e ao final, ainda terá aprendido um pouco sobre programação e prototipação.
+## How it works?
 
-## Colabore com o projeto
+The separation process is very simple, it consists only of 3 sensors where each one detects a type of material from the waste, and 3 servomotors that take each waste to a different compartment. All of this is managed by a microcontroller, who are responsible for correctly determining and disposing of waste according to its material, just build an identification and separation module through the detailed step by step. With that, you will set up your own trash can, and in the end, you will still have learned a little about programming and prototyping.
 
-Como o objetivo da Lixeira Inteligete é auxiliar no processo de separação e reciclagem, ele foi totalmente desenvolvido com a licença GPL v3 em mente. E o que isso significa? Isso significa que TODO o projeto está disponibilizado neste repositório na GitHub, e com isso, além de ter acesso a todos os documentos, arquivos e códigos do projeto, você pode também, sugerir alterações nos mesmos, e assim contribuir com o desenvolvimento, legal não? Então vamos lá, e nos ajude a transformar o mundo!
+## Collaboration
 
-## Construído com:
+Since the purpose of the Intelligent Recycle Bin is to assist in the separation and recycling process, it was fully developed with the GPL v3 license in mind. And what does that mean? This means that ALL the project is available in this repository on GitHub, and with that, in addition to having access to all documents, files and codes of the project, you can also suggest changes to them, and thus contribute to the development, legal not ? So come on, and help us transform the world!
 
-* [Arduino IDE](https://www.arduino.cc/en/main/software) - IDE para desenvolvimento em arduino
-* [MaterializeCSS](https://materializecss.com/) - Framework de CSS
+## Built with:
 
-## Autores
+* [Arduino IDE](https://www.arduino.cc/en/main/software) - Arduino development IDE
+* [MaterializeCSS](https://materializecss.com/) - CSS framework
+
+## Authors
 
 * **Mateus Lucas**  - [Email](mailto:mateus@lixeirainteligente.com)
 * **André Renkel** - [Email](mailto:andre@lixeirainteligente.com)
 
-## Licença
+## License
 
-Este projeto está sob a licença LGPL-3, olhe o arquivo [LICENSE.md](LICENSE.md) para mais detalhes
+This project is licensed under LGPL-3, see [LICENSE.md](LICENSE.md) for more details.
 
