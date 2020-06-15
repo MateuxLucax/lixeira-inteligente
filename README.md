@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="256" height="256" src="https://raw.githubusercontent.com/MateuxLucax/lixeira-inteligente/master/website/assets/img/componentes/logo-img.png">
+  <img width="128" height="128" src="https://raw.githubusercontent.com/MateuxLucax/lixeira-inteligente/master/website/assets/img/componentes/logo-img.png">
 </p>
 
 # Lixeira Inteligente
